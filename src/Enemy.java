@@ -1,7 +1,12 @@
+/**
+ *  Класс врага
+ */
 public class Enemy
 {
+    // Здоровье врага
     private int hp;
 
+    // Признак уничтожения врага
     private boolean isDestroid;
 
     public Enemy(int hp)
@@ -9,6 +14,11 @@ public class Enemy
         this.hp = hp;
     }
 
+    /**
+     * Метод получения повреждений противником
+     *
+     * @param zord - на входе получает объект атакующегшо зорда
+     */
     public void damaged(BaseZord zord)
     {
         int points = zord.attack();
@@ -23,6 +33,11 @@ public class Enemy
         }
     }
 
+    /**
+     * Метод получения признака уничтожен ли враг
+     *
+     * @return возвроащает значенрие признака isDestroid
+     */
     public boolean isDestroid()
     {
         return isDestroid;
